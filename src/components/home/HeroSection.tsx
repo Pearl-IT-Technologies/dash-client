@@ -130,10 +130,10 @@ const HeroSection = () => {
 										src={heroImages[currentSlide]}
 										alt={`Fashion showcase ${currentSlide + 1}`}
 										className="absolute inset-0 w-full h-full object-cover"
-										initial={{ opacity: 0, scale: 1.1 }}
-										animate={{ opacity: 1, scale: 1 }}
-										exit={{ opacity: 0, scale: 0.9 }}
-										transition={{ duration: 0.7 }}
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										exit={{ opacity: 0 }}
+										transition={{ duration: 0.4 }}
 									/>
 								</AnimatePresence>
 
@@ -143,15 +143,15 @@ const HeroSection = () => {
 								{/* Navigation Arrows */}
 								<button
 									onClick={prevSlide}
-									className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-primary-200/70 hover:bg-primary-100 p-2 md:p-3 rounded-full shadow-lg transition-all duration-300 z-10"
+									className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors p-2 md:p-3"
 								>
-									<ChevronLeft className="w-4 md:w-5 h-4 md:h-5 text-primary-900" />
+									<ChevronLeft className="w-4 md:w-5 h-4 md:h-5 text-white" />
 								</button>
 								<button
 									onClick={nextSlide}
-									className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-primary-200/70 hover:bg-primary-100 p-2 md:p-3 rounded-full shadow-lg transition-all duration-300 z-10"
+									className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors p-2 md:p-3"
 								>
-									<ChevronRight className="w-4 md:w-5 h-4 md:h-5 text-primary-900" />
+									<ChevronRight className="w-4 md:w-5 h-4 md:h-5 text-white" />
 								</button>
 							</div>
 
@@ -161,10 +161,10 @@ const HeroSection = () => {
 									<button
 										key={index}
 										onClick={() => setCurrentSlide(index)}
-										className={`w-2 md:w-3 h-2 md:h-3 rounded-full transition-all duration-300 ${
+										className={`h-2 md:h-3 rounded-full transition-all duration-300 ${
 											index === currentSlide
 												? "bg-primary-600 w-6 md:w-8"
-												: "bg-neutral-300 hover:bg-neutral-400"
+												: "bg-neutral-300 hover:bg-neutral-400 w-2 md:w-3"
 										}`}
 									/>
 								))}
